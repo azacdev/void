@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Icons } from "@/components/icons";
+import { Icons } from "@/components/global/icons";
 import { createAuthClient } from "better-auth/client";
 
 interface GoogleAuthButtonProps {

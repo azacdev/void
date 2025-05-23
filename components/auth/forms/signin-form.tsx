@@ -1,6 +1,5 @@
 "use client";
 
-import { z } from "zod";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -60,7 +59,7 @@ export function SigninForm() {
       <div className="text-center space-y-4">
         <h3 className="text-lg font-medium">Check your email</h3>
         <p className="text-sm text-muted-foreground">
-          We've sent a magic link to {form.getValues().email}
+          We&apos;ve sent a magic link to {form.getValues().email}
         </p>
         <Button
           variant="outline"

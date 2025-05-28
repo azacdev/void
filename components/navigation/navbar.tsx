@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { LucideIcon, ZapIcon } from "lucide-react";
+import { type LucideIcon, ZapIcon } from "lucide-react";
 import React, { useEffect, useState } from "react";
 
 import { cn } from "@/lib/utils";
@@ -57,7 +57,7 @@ const Navbar = () => {
           <div className="flex items-center space-x-12">
             <Link href="/#home">
               <span className="text-lg font-bold font-heading !leading-none">
-                Linkify
+                Void
               </span>
             </Link>
 
@@ -87,14 +87,15 @@ const Navbar = () => {
                                   className="z-20 relative"
                                 >
                                   <Link
-                                    href="/"
+                                    href="/features"
                                     className="flex h-full w-full select-none flex-col justify-end rounded-lg bg-gradient-to-b from-muted/50 to-muted p-4 no-underline outline-none focus:shadow-md"
                                   >
                                     <h6 className="mb-2 mt-4 text-lg font-medium">
                                       All Features
                                     </h6>
                                     <p className="text-sm leading-tight text-muted-foreground">
-                                      Manage links, track performance, and more.
+                                      Discover all the powerful tools to grow
+                                      your business.
                                     </p>
                                   </Link>
                                 </NavigationMenuLink>
@@ -114,13 +115,12 @@ const Navbar = () => {
                         </NavigationMenuContent>
                       </>
                     ) : (
-                      <Link href={link.href} legacyBehavior passHref>
-                        <NavigationMenuLink
-                          className={navigationMenuTriggerStyle()}
-                        >
-                          {link.title}
-                        </NavigationMenuLink>
-                      </Link>
+                      <NavigationMenuLink
+                        className={navigationMenuTriggerStyle()}
+                        href={link.href}
+                      >
+                        {link.title}
+                      </NavigationMenuLink>
                     )}
                   </NavigationMenuItem>
                 ))}
@@ -141,7 +141,7 @@ const Navbar = () => {
             ) : (
               <div className="flex items-center gap-x-4">
                 <Link
-                  href="/auth/sign-in"
+                  href="/signin"
                   className={buttonVariants({ size: "sm", variant: "ghost" })}
                 >
                   Sign In

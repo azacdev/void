@@ -35,6 +35,10 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+
+  /* BorderBeam Animation */
+  --animate-border-beam: border-beam calc(var(--duration, 15) * 1s) infinite
+    linear;
 }
 
 :root {
@@ -84,6 +88,13 @@
   --border: oklch(0.898 0 0);
   --input: oklch(0.898 0 0);
   --ring: oklch(0.039 0 0);
+}
+
+/* BorderBeam Keyframe Animation */
+@keyframes border-beam {
+  to {
+    offset-distance: 100%;
+  }
 }
 
 @layer base {

@@ -37,7 +37,7 @@ const MobileNavbar = () => {
             <Menu className="w-5 h-5" />
           </Button>
         </SheetTrigger>
-        <SheetContent className="w-screen">
+        <SheetContent className="w-screen p-6">
           <SheetClose
             asChild
             className="absolute top-3 right-5 bg-background z-20 flex items-center justify-center"
@@ -47,7 +47,7 @@ const MobileNavbar = () => {
             </Button>
           </SheetClose>
           <div className="flex flex-col items-start w-full py-2 mt-10">
-            <div className="flex items-center justify-evenly w-full space-x-2">
+            <div className="flex flex-col items-center justify-evenly w-full space-x-2">
               {session ? (
                 <Link
                   href="/dashboard"
@@ -61,19 +61,10 @@ const MobileNavbar = () => {
               ) : (
                 <>
                   <Link
-                    href="/auth/sign-in"
-                    className={buttonVariants({
-                      variant: "outline",
-                      className: "w-full",
-                    })}
-                  >
-                    Sign In
-                  </Link>
-                  <Link
-                    href="/auth/sign-up"
+                    href="/sign-in"
                     className={buttonVariants({ className: "w-full" })}
                   >
-                    Sign Up
+                    Sign In
                   </Link>
                 </>
               )}

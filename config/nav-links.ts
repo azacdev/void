@@ -1,40 +1,53 @@
 import {
+  BarChart3Icon,
+  BookOpenIcon,
+  CreditCardIcon,
   HelpCircleIcon,
-  LineChartIcon,
-  Link2Icon,
-  LockIcon,
+  LucideIcon,
   NewspaperIcon,
-  QrCodeIcon,
+  ShieldIcon,
+  UsersIcon,
 } from "lucide-react";
 
-export const navLinks = [
+export interface NavLink {
+  title: string;
+  href: string;
+  menu?: {
+    title: string;
+    tagline: string;
+    href: string;
+    icon: LucideIcon;
+  }[];
+}
+
+export const navLinks: NavLink[] = [
   {
     title: "Features",
     href: "/features",
     menu: [
       {
-        title: "Link Shortening",
-        tagline: "Shorten links and track their performance.",
-        href: "/features/link-shortening",
-        icon: Link2Icon,
-      },
-      {
-        title: "Password Protection",
-        tagline: "Secure your links with a password.",
-        href: "/features/password-protection",
-        icon: LockIcon,
-      },
-      {
-        title: "Advanced Analytics",
-        tagline: "Gain insights into who is clicking your links.",
+        title: "Analytics Dashboard",
+        tagline: "Track your business metrics and performance.",
         href: "/features/analytics",
-        icon: LineChartIcon,
+        icon: BarChart3Icon,
       },
       {
-        title: "Custom QR Codes",
-        tagline: "Use QR codes to reach your audience.",
-        href: "/features/qr-codes",
-        icon: QrCodeIcon,
+        title: "Team Management",
+        tagline: "Collaborate with your team members effectively.",
+        href: "/features/team-management",
+        icon: UsersIcon,
+      },
+      {
+        title: "Advanced Security",
+        tagline: "Enterprise-grade security for your data.",
+        href: "/features/security",
+        icon: ShieldIcon,
+      },
+      {
+        title: "Billing & Payments",
+        tagline: "Flexible billing options and payment processing.",
+        href: "/features/billing",
+        icon: CreditCardIcon,
       },
     ],
   },
@@ -51,13 +64,19 @@ export const navLinks = [
     href: "/resources",
     menu: [
       {
+        title: "Documentation",
+        tagline: "Learn how to get the most out of our platform.",
+        href: "/resources/docs",
+        icon: BookOpenIcon,
+      },
+      {
         title: "Blog",
         tagline: "Read articles on the latest trends in tech.",
         href: "/resources/blog",
         icon: NewspaperIcon,
       },
       {
-        title: "Help",
+        title: "Help Center",
         tagline: "Get answers to your questions.",
         href: "/resources/help",
         icon: HelpCircleIcon,

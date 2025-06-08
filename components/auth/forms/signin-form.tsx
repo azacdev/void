@@ -42,6 +42,8 @@ export function SigninForm() {
             toast.success("Magic link sent! Check your email.");
           },
           onError: (ctx) => {
+            console.log("Error", ctx);
+
             toast.error("Failed to send magic link. Please try again.");
           },
         }

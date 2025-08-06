@@ -1,16 +1,27 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
+import { headers } from "next/headers";
 
+import { auth } from "@/lib/auth";
 import { SigninForm } from "@/components/auth/forms/signin-form";
 import { BorderBeam } from "@/components/animations/border-beam";
+import { redirect } from "next/navigation";
 
 export const metadata: Metadata = {
   title: "Sign In | Void",
   description: "Sign in with a magic link sent to your email or with Google",
 };
 
-export default function SigninPage() {
+export default async function SigninPage() {
+  const session = await auth.api.getSession({
+    headers: await headers(),
+  });
+
+  if (session) {
+    redirect("/dashboard");
+  }
+
   return (
     <div className="flex min-h-screen bg-black">
       {/* Left side - Form */}

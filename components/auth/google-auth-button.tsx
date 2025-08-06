@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+
 import { Button } from "@/components/ui/button";
 import { Icons } from "@/components/global/icons";
 import { createAuthClient } from "better-auth/client";
@@ -26,7 +27,7 @@ export function GoogleAuthButton({ isLoading = false }: GoogleAuthButtonProps) {
       type="button"
       disabled={isLoading || isGoogleLoading}
       onClick={signIn}
-      className="w-full"
+      className="w-full cursor-pointer"
     >
       {isGoogleLoading ? (
         <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />

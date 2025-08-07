@@ -1,14 +1,10 @@
 import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
-import Navbar from "@/components/navigation/navbar";
-import Footer from "@/components/navigation/footer";
 
 const NotFound = () => {
   return (
     <main className="relative flex flex-col items-center justify-center px-4">
-      <Navbar />
-
       <div className="flex flex-col items-center justify-center mx-auto h-screen">
         <div className="flex items-center justify-center h-full flex-col">
           <span className="text-sm font-medium px-3.5 py-1 rounded-md bg-gradient-to-br from-violet-400 to-purple-600 text-neutral-50 not-found">
@@ -30,8 +26,6 @@ const NotFound = () => {
           </Link>
         </div>
       </div>
-
-      <Footer />
     </main>
   );
 };

@@ -8,9 +8,6 @@ import { nextCookies } from "better-auth/next-js";
 import { sendEmailAction } from "@/actions/send-email";
 
 export const auth = betterAuth({
-  emailAndPassword: {
-    enabled: true,
-  },
   socialProviders: {
     google: {
       clientId: process.env.GOOGLE_CLIENT_ID as string,

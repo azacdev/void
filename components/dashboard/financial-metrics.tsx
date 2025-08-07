@@ -1,25 +1,20 @@
 "use client";
 
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { IconSettings, IconDownload, IconPlus } from "@tabler/icons-react";
+
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
 
 export function FinancialMetrics() {
   return (
     <div className="space-y-6">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-4">
-          <Button
-            variant="outline"
-            className="bg-gray-800 border-gray-700 text-white hover:bg-gray-700"
-          >
+          <Button variant="outline" className=" text-white hover:bg-gray-700">
             <IconSettings className="h-4 w-4 mr-2" />
             Manage Balance
           </Button>
-          <Button
-            variant="outline"
-            className="bg-gray-800 border-gray-700 text-white hover:bg-gray-700"
-          >
+          <Button variant="outline" className=" text-white hover:bg-gray-700">
             <IconDownload className="h-4 w-4 mr-2" />
             Export
           </Button>
@@ -31,7 +26,7 @@ export function FinancialMetrics() {
       </div>
 
       <div className="grid grid-cols-3 gap-6">
-        <Card className="bg-gray-800 border-gray-700">
+        <Card className="">
           <CardContent className="p-6">
             <div className="space-y-2">
               <p className="text-gray-400 text-sm">Total Revenue</p>
@@ -45,7 +40,7 @@ export function FinancialMetrics() {
           </CardContent>
         </Card>
 
-        <Card className="bg-gray-800 border-gray-700">
+        <Card className="">
           <CardContent className="p-6">
             <div className="space-y-2">
               <p className="text-gray-400 text-sm">Total Saving</p>
@@ -59,7 +54,7 @@ export function FinancialMetrics() {
           </CardContent>
         </Card>
 
-        <Card className="bg-gray-800 border-gray-700">
+        <Card className="">
           <CardContent className="p-6">
             <div className="space-y-2">
               <p className="text-gray-400 text-sm">Monthly Expense</p>

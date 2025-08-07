@@ -1,7 +1,5 @@
 "use client";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
+
 import {
   IconPlus,
   IconArrowUp,
@@ -9,24 +7,31 @@ import {
   IconDownload,
   IconHistory,
   IconBrandNetflix,
+  IconSearch,
 } from "@tabler/icons-react";
+
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Input } from "@/components/ui/input";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 
 export function CreditCardWidget() {
   return (
     <div className="space-y-6">
       {/* Credit/Debit Toggle and Add Card */}
+      <div className="relative">
+        <IconSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
+        <Input placeholder="Search Anything..." className="pl-10 w-80" />
+      </div>
       <div className="flex items-center justify-between">
         <ToggleGroup
           type="single"
           defaultValue="credit"
-          className="bg-gray-800 p-1 rounded-lg"
+          className=" p-1 rounded-lg"
         >
-          <ToggleGroupItem
-            value="credit"
-            className="text-white data-[state=on]:bg-green-500"
-          >
-            <div className="w-2 h-2 bg-green-500 rounded-full mr-2" />
+          <ToggleGroupItem value="credit" className="text-white ">
+            <div className="w-2 h-2  rounded-full mr-2" />
             Credit
           </ToggleGroupItem>
           <ToggleGroupItem value="debit" className="text-gray-400">
@@ -41,7 +46,7 @@ export function CreditCardWidget() {
       </div>
 
       {/* Credit Card */}
-      <Card className="bg-gradient-to-br from-gray-800 to-gray-900 border-gray-700 text-white">
+      <Card className=" text-white">
         <CardContent className="p-6">
           <div className="flex justify-between items-start mb-8">
             <div className="flex items-center gap-2">
@@ -139,12 +144,12 @@ export function CreditCardWidget() {
       <div>
         <div className="flex items-center justify-between mb-4">
           <h3 className="text-white font-semibold">Bill & Payment</h3>
-          <Button size="sm" className="bg-gray-700 hover:bg-gray-600">
+          <Button size="sm" className="">
             <IconPlus className="h-4 w-4" />
           </Button>
         </div>
 
-        <Card className="bg-gray-800 border-gray-700">
+        <Card className="">
           <CardContent className="p-4">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center">

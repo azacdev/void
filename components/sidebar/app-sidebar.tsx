@@ -151,8 +151,8 @@ function TreeSection({ title, items, defaultOpen = true }: TreeSectionProps) {
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
-    <Sidebar {...props}>
-      <div className="max-w-[90%] max-h-[95%] h-full w-full mx-auto rounded-lg bg-[hsl(240,5.0847%,11.5686%)]">
+    <Sidebar {...props} className="border-none">
+      <div className="max-w-[90%] max-h-[95%] h-full w-full mx-auto rounded-lg bg-card my-auto overflow-hidden">
         <SidebarHeader className="p-4">
           <div className="flex items-center justify-between gap-3">
             <div className="w-8 h-8 bg-orange-500 rounded-lg flex items-center justify-center">
@@ -162,7 +162,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
           </div>
         </SidebarHeader>
 
-        <ScrollArea className="h-full p-0 pr-4 pb-10">
+        <ScrollArea className="h-full p-0 pr-4 pb-20">
           <SidebarContent className="pl-4 py-4 space-y-6">
             <TreeSection title="MAIN" items={navigationData.main} />
             <TreeSection title="FEATURES" items={navigationData.features} />

@@ -44,7 +44,7 @@ export function CashFlowChart() {
   const [activeTab, setActiveTab] = React.useState("income");
 
   return (
-    <Card className="bg-gray-800 border-gray-700">
+    <Card className="">
       <CardHeader className="pb-4">
         <div className="flex items-center justify-between">
           <div>
@@ -52,10 +52,10 @@ export function CashFlowChart() {
             <p className="text-white text-2xl font-bold mt-1">$19,270.56</p>
           </div>
           <Select defaultValue="weekly">
-            <SelectTrigger className="w-32 bg-gray-700 border-gray-600 text-white">
+            <SelectTrigger className="w-32">
               <SelectValue />
             </SelectTrigger>
-            <SelectContent className="bg-gray-700 border-gray-600">
+            <SelectContent className="">
               <SelectItem value="weekly">Weekly</SelectItem>
               <SelectItem value="monthly">Monthly</SelectItem>
               <SelectItem value="yearly">Yearly</SelectItem>
@@ -68,11 +68,6 @@ export function CashFlowChart() {
             variant={activeTab === "income" ? "default" : "ghost"}
             size="sm"
             onClick={() => setActiveTab("income")}
-            className={
-              activeTab === "income"
-                ? "bg-gray-700 text-white"
-                : "text-gray-400 hover:text-white"
-            }
           >
             Income
           </Button>
@@ -80,11 +75,6 @@ export function CashFlowChart() {
             variant={activeTab === "expense" ? "default" : "ghost"}
             size="sm"
             onClick={() => setActiveTab("expense")}
-            className={
-              activeTab === "expense"
-                ? "bg-gray-700 text-white"
-                : "text-gray-400 hover:text-white"
-            }
           >
             Expense
           </Button>
@@ -92,11 +82,6 @@ export function CashFlowChart() {
             variant={activeTab === "saving" ? "default" : "ghost"}
             size="sm"
             onClick={() => setActiveTab("saving")}
-            className={
-              activeTab === "saving"
-                ? "bg-gray-700 text-white"
-                : "text-gray-400 hover:text-white"
-            }
           >
             Saving
           </Button>
